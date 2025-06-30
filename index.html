@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Picture Share</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a Picture</h1>
+        <form id="uploadForm" enctype="multipart/form-data" action="/upload" method="POST">
+            <input type="file" name="picture" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+        <div id="qrCodeContainer" style="display:none;">
+            <h2>Your QR Code</h2>
+            <img id="qrCode" src="" alt="QR Code">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

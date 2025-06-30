@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Picture</title>
+</head>
+<body>
+    <h1>Your Uploaded Picture</h1>
+    <img id="uploadedImage" src="" alt="Uploaded Picture" />
+    <script>
+        // Function to get the image URL from the QR code data
+        function getImageUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('imageUrl');
+        }
+
+        // Set the image source to the uploaded image URL
+        document.getElementById('uploadedImage').src = getImageUrl();
+    </script>
+</body>
+</html>
